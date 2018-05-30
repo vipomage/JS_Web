@@ -1,14 +1,5 @@
-const fs = require('fs');
-
-function errorHandler(req,res){
-  fs.readFile("./error.html", "utf8", (err, data) => {
-    res.writeHead(404, {
-      "content-Type": "text/html"
-    });
-    res.write(data);
-    res.end();
-  });
+function errorHandler(req, res) {
+  res.sendHtml("./error.html");
 }
-
 
 module.exports = errorHandler;

@@ -24,6 +24,7 @@ function frontController(req, res) {
   };
 
   if (req.method === "GET") {
+    console.log(url.parse(req.url).pathname);
     for (let handler of handlers) {
       if (handler(req, res) !== true) {
         break;
