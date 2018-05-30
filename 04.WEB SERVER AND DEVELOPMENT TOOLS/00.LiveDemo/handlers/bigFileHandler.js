@@ -2,14 +2,12 @@ const fs = require("fs");
 
 function handleBigFile(req, res) {
   if (req.path === "/bigFile") {
-    const read = fs.createReadStream('./file.txt');
-    read.on('data',  data => {
-      res.writeHead(200, {"content-type": "text/plain"});
-      res.write(data);
+    const read = fs.createReadStream("./file.txt");
+
+    res.writeHead(200, {
+      "Content-Type": "text/plain"
     });
-    read.on("end", () => {
-      res.end();
-    });
+    read.pipe(res);
   } else {
     return true;
   }
