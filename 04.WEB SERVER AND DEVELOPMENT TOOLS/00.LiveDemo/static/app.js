@@ -1,3 +1,5 @@
 function getMessage(){
-    alert('It works!')
+    $.get('/data/messages').then(data =>{
+        console.log(data);
+    });
 }
