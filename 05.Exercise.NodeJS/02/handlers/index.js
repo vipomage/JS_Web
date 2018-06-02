@@ -1,9 +1,9 @@
 const staticHandler = require('./static');
-const homeHandler = require('./home');
+const viewHandler = require('./views');
 
 
 
 module.exports = [
   staticHandler,
-  homeHandler
+  viewHandler
 ];
