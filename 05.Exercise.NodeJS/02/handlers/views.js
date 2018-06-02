@@ -5,9 +5,11 @@ function viewHandler(req, res) {
     req.path === "/home.html"
   ) {
     res.sendHtml("./views/home.html");
-  } else if (req.path === "/viewAllMovies") {
-    res.sendHtml("./views/viewAll.html");
-  } else if (req.path === "/addMovie") {
+  }
+  // else if (req.path === "/viewAllMovies") {
+  //   res.sendHtml("./views/viewAll.html");
+  // }
+  else if (req.path === "/addMovie") {
     res.sendHtml("./views/addMovie.html");
   } else if (req.path === "/status") {
     res.sendHtml("./views/status.html");
