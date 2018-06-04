@@ -8,8 +8,5 @@
     "start": "node index.js"
   },
   "author": "VIPo",
-  "license": "MIT",
-  "dependencies": {
-    "body-parser": "^1.18.3"
-  }
+  "license": "MIT"
 }

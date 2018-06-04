@@ -61,4 +61,4 @@ function frontController(req, res) {
   }
 }
 
-console.log(`Server up and running \nListening on port ${port}`);
+console.log(`Server up and running \nListening on port: ${port}\nLink - http://localhost:${port}`);
