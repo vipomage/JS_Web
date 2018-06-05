@@ -36,7 +36,7 @@ mongoose
     //     lastName:'Ivanov',
     //     cats
     //   });
-    //   newOwner.save(); // --- > simulating relatins
+    //   newOwner.save(); // --- > simulating relations
     // });
     
     
