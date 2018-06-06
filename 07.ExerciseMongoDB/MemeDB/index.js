@@ -15,6 +15,10 @@ db.load().then(() => {
           break;
         }
       }
+      res.redirect = url => {
+        res.writeHead(302, {Location: url});
+        res.end();
+      };
     })
     .listen(port);
   console.log('Im listening on ' + port);

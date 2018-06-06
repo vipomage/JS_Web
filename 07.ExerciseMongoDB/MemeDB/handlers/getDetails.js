@@ -1,4 +1,4 @@
-const db = require("../db/db");
+let db = require("../db/db");
 const fs = require("fs");
 
 const getDetails = (req, res) => {
@@ -12,9 +12,9 @@ const getDetails = (req, res) => {
     } else {
       let replacement = `<div class="content">
     <img src="${targetedMeme.memeSrc}" alt=""/>
-    <h3>Title  ${targetedMeme.title}</h3>
+    <h3>Title <br> <em>${targetedMeme.title}</em> </h3>
     <p> ${targetedMeme.description}</p>
-    <button><a href="${targetedMeme.posterSrc}">Download Meme</a></button>
+    <button><a href="${targetedMeme.memeSrc}">Download Meme</a></button>
     </div>`;
       data = data.replace(
         '<div id="replaceMe">{{replaceMe}}</div>',
