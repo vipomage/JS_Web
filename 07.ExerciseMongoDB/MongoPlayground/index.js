@@ -17,6 +17,8 @@ require("./config/db").then(() => {
       }
     }
   })
-    .listen(port, () => console.log(`Listening on port ${port}`));
+    .listen(port, () => {
+      console.log(`Listening on port ${port}\nhttp://localhost:${port}`)
+    });
   
 }).catch(err => {throw err});
