@@ -29,7 +29,7 @@ module.exports = (req, res) => {
       } else {
         getImagesAndRespond(params);
       }
-      
+
       function getImagesAndRespond(params) {
         Image.find(params).then(data => {
           let imageHtml = "";
@@ -37,7 +37,7 @@ module.exports = (req, res) => {
             imageHtml += imageTemplate(image);
           }
           html = html.replace('<div class="replaceMe"></div>', imageHtml);
-          
+  
           res.writeHead(200, {"content-type": "text/html"});
           res.write(html);
           res.end();
