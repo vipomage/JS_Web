@@ -17,8 +17,14 @@ require('./config/db')
       Book.find({}).then(library => {
           books = library.map(book => book._doc);
       });
-      
-      app.get('/', (req, res) => res.render('index', {count: books.length}));
+    
+      app.get('/', (req, res) => {
+          Book.find({}).then(library => {
+              books = library.map(book => book._doc);
+          }).then(() => {
+              res.render('index', {count: books.length})
+          });
+      });
       
       app.get('/viewAllBooks', (req, res) => {
           Book.find({}).then(library => {
