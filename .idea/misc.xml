@@ -3,4 +3,7 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/08.IntroductionToExpress.Js/02/typings/modules/mongoose/index.d.ts" />
+  </component>
 </project>

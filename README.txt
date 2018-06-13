@@ -3,7 +3,8 @@ mongodb
 mongoose
 http
 body-parser
-
+pug
+pug-cli
 typings --global {
     typings install mongodb
     typings install express
