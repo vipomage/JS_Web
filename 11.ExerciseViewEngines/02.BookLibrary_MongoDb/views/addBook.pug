@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    title Add Book
+    link(rel="stylesheet" type="text/css" href="/static/css/main.css")
+body
+    header
+        div.inner
+            nav
+                a.logo(href="/")
+                    img.logo(src="/static/images/expressjs-card.png" alt="expressLogo")
+                input#nav(type="checkbox")
+                label(for="nav")
+                ul
+                    li
+                        a(href="/addBook") Add Book
+                    li
+                        a(href="/viewAllBooks") View All Books
+h1 Add New Book
+if !newBook
+    if error
+        div#errBox
+            h2#errMsg Please fill all fields
+    else if !error
+        div#succssesBox
+            h2#succssesMsg Book Added
+div.container
+    form(action="/addBook" method="POST")
+        //DONT FK UP INDENTS ITS NIGHTMARE WITHOUT DEBUGGING PARSE ERROR FFS
+        label(for="bookTitle") Title
+        input#bookTitle(type="text" name="bookTitle" placeholder="The title of the book")
+        label(for="bookYear") Year
+        input#bookYear(type="text" name="bookYear" placeholder="Year of release")
+        label(for="bookPoster") Poster
+        input#bookPoster(type="text" name="bookPoster" placeholder="Link to a poster")
+        label(for="bookAuthor") Author
+        input#bookAuthor(type="text" name="bookAuthor" placeholder="Book author")
+        input(type="submit" value="Submit")
+        //AND DONT LEAVE EMPTY LINES

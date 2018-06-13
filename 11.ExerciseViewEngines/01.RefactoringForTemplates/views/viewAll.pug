@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    title All Books
+    link(rel="stylesheet" type="text/css" href="/static/css/main.css")
+body
+    header
+        div.inner
+            nav
+                a.logo(href="/")
+                    img.logo(src="/static/images/expressjs-card.png" alt="expressLogo")
+                input#nav(type="checkbox")
+                label(for="nav")
+                ul
+                    li
+                        a(href="/addBook") Add Book
+                    li
+                        a(href="/viewAllBooks") View All Books
+    h1 Here are your books
+    div.container
+        each val,index in books
+            div.book
+                a(href="details/"+index)
+                    img.bookPoster(src="/static/images/"+val.src+".png")

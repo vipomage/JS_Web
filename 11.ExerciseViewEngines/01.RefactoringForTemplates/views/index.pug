@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    title Book Library
+    link(rel="stylesheet" type='text/css' href="/static/css/main.css")
+body
+    header
+        div.inner
+            nav
+                a.logo(href="/")
+                    img.logo(src="/static/images/expressjs-card.png" alt="expressLogo")
+                input(type="checkbox" id="nav")
+                label(for="nav")
+                ul
+                    li
+                        a(href="/addBook") Add Book
+                    li
+                        a(href="/viewAllBooks") View All Books
+    h1 Hello I'm your Express Book DB app!
+    h2 There are currently 4 books in the database

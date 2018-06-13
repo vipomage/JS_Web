@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    title Book Details
+    link(rel="stylesheet" type="text/css" href="/static/css/main.css")
+body
+    header
+        div.inner
+            nav
+                a.logo(href="/")
+                    img.logo(src="/static/images/expressjs-card.png" alt="expressLogo")
+                input#nav(type="checkbox")
+                label(for="nav")
+                ul
+                    li
+                        a(href="/addBook") Add Book
+                    li
+                        a(href="/viewAllBooks") View All Books
+    div.content
+        img(src=src alt="")
+        h3=name
+        h3=author
+        p="Released "+ year
