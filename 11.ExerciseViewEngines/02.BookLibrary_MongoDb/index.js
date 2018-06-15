@@ -19,20 +19,22 @@ require('./config/db')
       });
     
       app.get('/', (req, res) => {
-          Book.find({}).then(library => {
-              books = library.map(book => book._doc);
-          }).then(() => {
-              res.render('index', {count: books.length})
-          });
+          Book.find({})
+            .then(library => {
+                books = library.map(book => book._doc);
+            })
+            .then(() => {
+                res.render('index', {count: books.length});
+            });
       });
-      
+    
       app.get('/viewAllBooks', (req, res) => {
           Book.find({}).then(library => {
               books = library.map(book => book._doc);
               res.render('viewAll', {books});
           });
       });
-      
+    
       app.get('/details/:id', (req, res) => {
           Book.findById(req.params.id).then(data => {
               let book = data._doc;
