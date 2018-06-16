@@ -1,0 +1,12 @@
+include ../layouts/main
+h1 Edit a car
+    form(method='post', action='/cars/edit/'+car._id)
+        input(name='make', placeholder="Make" value= car.make)
+        |
+        input(name='model', placeholder="Model" value =car.model)
+        |
+        input(name='imageUrl', placeholder="Name" value=car.imageUrl)
+        |
+        input(name='color', placeholder="Color" value=car.color)
+        |
+        input#submit(type='submit', value='EDIT')

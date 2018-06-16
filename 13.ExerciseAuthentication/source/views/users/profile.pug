@@ -1,0 +1,23 @@
+include ../layouts/main
+h1 Profile
+section
+    h2 Username: {{username}}
+section
+    h2 Rent history
+    table
+        thead
+            tr
+                td Car
+                td Duration
+        tbody
+            | {{#each rentedCars}}
+            tr
+                td {{make}} {{model}}
+                td Not implemented.
+            |             {{else}}
+            tr
+                td(colspan='2')
+                    i
+                        | No rent history.
+                        a(href='/cars/all') Rent now
+            |             {{/each}}

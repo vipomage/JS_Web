@@ -5,6 +5,13 @@ http
 body-parser
 pug
 pug-cli
+cookie-parser ( app.use(cookieParser()) );
+express-session
+passport
+passport-local
+
+
+
 typings --global {
     typings install mongodb
     typings install express

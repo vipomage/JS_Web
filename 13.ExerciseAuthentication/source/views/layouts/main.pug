@@ -1,0 +1,41 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title RentACar
+        link(rel='stylesheet', type='text/css', href='/css/style.css')
+        link(rel='icon', href='/favicon.ico?')
+    body
+    header
+        nav
+            img#logo(src='/logo.png', alt='logo')
+            ul#main-nav
+                li
+                    a(href='/') home
+                li
+                    a(href='/cars/all') all cars
+            if !isLogged
+                li
+                    a(href='/cars/create') add car
+            if !isLogged
+                li
+                    a(href='/users/profile/me') profile
+            if isLogged
+                ul#user
+                    li
+                        a(href='/users/register') register
+                    li
+                        a(href='/users/login') login
+    section#main-container
+        main
+        if message
+            div.message=message
+    footer
+        span Authentication exercise
+    script.
+        document.onload = function () {
+            document
+              .querySelector('body')
+              .classList
+              .remove('preload');
+        }

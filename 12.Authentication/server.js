@@ -93,7 +93,7 @@ app.get('/cart', isAuthenticated, (req, res) => {
 app.get('/remove/:id', (req, res) => {
     const items = req.session.cart || [];
     const id = Number(req.params.id);
-    req.session.cart = items.filter((p, i) => i != id);
+    req.session.cart = items.filter((p, i) => i !== id);
     res.redirect('/cart');
 });
 
